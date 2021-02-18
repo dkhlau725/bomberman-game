@@ -1,0 +1,7 @@
+proj: part1.asm part2.asm
+	m4 part1.asm > p1.s
+	m4 part2.asm > p2.s
+	as p1.s -g -o p1.o
+	as p2.s -g -o p2.o
+	gcc p1.o p2.o -g -o proj
+
